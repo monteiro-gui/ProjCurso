@@ -2,6 +2,7 @@ package controller;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -74,14 +75,19 @@ protected void Salvar(HttpServletRequest request, HttpServletResponse response) 
 	pw.println("Telefone: "+alu.getTelefone());
 	pw.println("Data Nascimento: "+alu.getDatanasc());
 	pw.println("Rg: "+alu.getRg());
-pw.println("Cpf: "+alu.getCpf());
+	pw.println("Cpf: "+alu.getCpf());
 	pw.println("Cep: "+alu.getCep());
 	pw.println("Número: "+alu.getNumero());
-pw.println("Complemento: "+alu.getComplemento());	
+	pw.println("Complemento: "+alu.getComplemento());	
 	
 }
 
 protected void Imprimir(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	
+	ArrayList<Aluno> lista = dao.listar();
+	request.setAttribute("alunos",lista);
+	
+	
 	RequestDispatcher rd = request.getRequestDispatcher("RelAluno.jsp");
 	rd.forward(request, response);
 }
