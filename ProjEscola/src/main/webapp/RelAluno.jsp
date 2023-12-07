@@ -56,7 +56,8 @@
 			      <td><%=lista.get(i).getTelefone()%></td>
 			      <td><%=lista.get(i).getEmail()%></td>
 			       <td><%=lista.get(i).getCpf()%></td>		
-			       <td><a href="bteditar?idaluno=<%=lista.get(i).getIdaluno()%>"><button type="button" class="btn btn-primary">Editar</button></a></td>	      
+			       <td><a href="bteditar?idaluno=<%=lista.get(i).getIdaluno()%>"><button type="button" class="btn btn-primary">Editar</button></a></td>
+			       <td><a href="btexcluir?idaluno=<%=lista.get(i).getIdaluno()%>"><button type="button" class="btn btn-danger">Excluir</button></a></td>	      
 			    </tr>
 			    
 			    <% } %>

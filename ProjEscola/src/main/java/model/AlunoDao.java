@@ -107,5 +107,43 @@ public class AlunoDao {
 		}
 	}
 	
+	public void Editar(Aluno alu) {
+		try {
+			con = new Conexao().conectar();
+			String sql = "update aluno set nome=?,telefone=?,email=?,datanasc=?,cpf=?,rg=?,cep=?,numero=?,complemento=?, where idaluno?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setString(1, alu.getNome());
+			stmt.setString(2, alu.getTelefone());			
+			stmt.setString(3, alu.getEmail());
+			stmt.setString(4, alu.getDatanasc());
+			stmt.setString(5, alu.getCpf());
+			stmt.setString(6, alu.getRg());
+			stmt.setString(7, alu.getCep());
+			stmt.setInt(8, alu.getNumero());
+			stmt.setString(9, alu.getComplemento());
+			stmt.setInt(10, alu.getIdaluno());
+			stmt.executeUpdate();
+		}
+		
+		catch (Exception erro) {
+			System.out.println(erro);
+			
+		}
+	}
 
+	
+	public void Excluir(Aluno alu) {
+		try {
+			con = new Conexao().conectar();
+			String sql = "delete from aluno where idaluno=?";
+			PreparedStatement stmt = con.prepareStatement(sql);
+			stmt.setInt(1, alu.getIdaluno());
+			stmt.executeUpdate();
+		}
+		
+		catch (Exception erro) {
+			System.out.println(erro);
+			
+		}
+	}
 }

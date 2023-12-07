@@ -19,10 +19,10 @@ import model.AlunoDao;
 /**
  * Servlet implementation class AlunoController
  */
-@WebServlet({"/AlunoController","/alunonovo","/relaluno","/bteditar"})
+@WebServlet({"/AlunoController","/alunonovo","/relaluno","/bteditar","/editar","/btexcluir"})
 
 public class AlunoController extends HttpServlet {
-	private static final long serialVersionUID = 1L;       
+	private static final long serialVersionUID = 1L;      
    
     public AlunoController() {
         super();
@@ -50,7 +50,14 @@ public class AlunoController extends HttpServlet {
 		if(action.equals("/bteditar")) {
 			Exibir(request,response);
 		}
+		
+		if(action.equals("/editar")) {
+			Editar(request,response);
+		}
 	
+		if(action.equals("/btexcluir")) {
+			Excluir(request,response);
+		}
 	}
 	
 
@@ -127,6 +134,52 @@ protected void Exibir(HttpServletRequest request, HttpServletResponse response) 
 	rd.forward(request, response);	
 	
 }
+
+
+protected void Editar(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	// TODO Auto-generated method stub
+	
+	alu.setIdaluno(Integer.parseInt(request.getParameter("idaluno")));
+	alu.setNome(request.getParameter("nome"));
+	alu.setTelefone(request.getParameter("telefone"));
+	alu.setEmail(request.getParameter("email"));
+	alu.setDatanasc(request.getParameter("datanasc"));
+	alu.setRg(request.getParameter("rg"));
+	alu.setCpf(request.getParameter("cpf"));
+	alu.setCep(request.getParameter("cep"));
+	alu.setNumero(Integer.parseInt(request.getParameter("numero")));
+	alu.setComplemento(request.getParameter("complemento"));
+	
+	dao.Editar(alu);
+	
+	
+	
+	PrintWriter pw=response.getWriter();
+	pw.println("Aluno Cadastrado!");
+	
+	/*
+	pw.println("Código: "+alu.getIdaluno());
+	pw.println("Nome: "+alu.getNome());
+	pw.println("Telefone: "+alu.getTelefone());
+	pw.println("Data Nascimento: "+alu.getDatanasc());
+	pw.println("Rg: "+alu.getRg());
+	pw.println("Cpf: "+alu.getCpf());
+	pw.println("Cep: "+alu.getCep());
+	pw.println("Número: "+alu.getNumero());
+	pw.println("Complemento: "+alu.getComplemento());	*/
+	
+}
+
+
+protected void Excluir(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+	// TODO Auto-generated method stub
+	
+	alu.setIdaluno(Integer.parseInt(request.getParameter("idaluno")));
+	dao.Excluir(alu);
+	Imprimir(request,response);
+	response.sendRedirect("RelAluno.jsp");
+}
+
 
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		// TODO Auto-generated method stub

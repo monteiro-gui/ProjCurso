@@ -28,8 +28,8 @@
           Cadastros
         </a>
         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-          <a class="dropdown-item" href="#">Aluno</a>
-          <a class="dropdown-item" href="#">Curso</a>          
+          <a class="dropdown-item" href="CadAluno.jsp">Aluno</a>
+          <a class="dropdown-item" href="CadCurso.jsp">Curso</a>          
           <a class="dropdown-item" href="#">Turma</a>
           <a class="dropdown-item" href="#">Matricula</a>          
         </div>
