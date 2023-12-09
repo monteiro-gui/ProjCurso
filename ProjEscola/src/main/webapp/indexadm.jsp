@@ -15,7 +15,13 @@
 <div class="container-fluid text-center">
 	<div class="row">
 		<div class="col-md-12">
-			<h1>Sistema Escolar</h1>		
+			<h1>Sistema Escolar</h1>
+			<h5>
+				<%
+					Object usu = session.getAttribute("usuario");
+					out.print("Bem Vindo(a) - " + usu);
+				%>
+			</h5>		
 		</div>	
 	</div>
 </div>

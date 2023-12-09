@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>Insert title here</title>
+<title>Faça Seu Login</title>
 
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
@@ -16,15 +16,15 @@
 			
 			<div class="col-md-4 text-center">
 			<h2>Acesso ao Sistema</h2>
-				<form>
+				<form method="post" action="login">
 					  <div class="form-group">
 					    <label for="exampleInputEmail1">Email</label>
-					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+					    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Seu email" name="email">
 					   
 					  </div>
 					  <div class="form-group">
 					    <label for="exampleInputPassword1">Senha</label>
-					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+					    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha" name="senha">
 					  </div>
 					 
 					  <button type="submit" class="btn btn-primary">Enviar</button>

@@ -151,22 +151,8 @@ protected void Editar(HttpServletRequest request, HttpServletResponse response) 
 	alu.setComplemento(request.getParameter("complemento"));
 	
 	dao.Editar(alu);
-	
-	
-	
-	PrintWriter pw=response.getWriter();
-	pw.println("Aluno Cadastrado!");
-	
-	/*
-	pw.println("Código: "+alu.getIdaluno());
-	pw.println("Nome: "+alu.getNome());
-	pw.println("Telefone: "+alu.getTelefone());
-	pw.println("Data Nascimento: "+alu.getDatanasc());
-	pw.println("Rg: "+alu.getRg());
-	pw.println("Cpf: "+alu.getCpf());
-	pw.println("Cep: "+alu.getCep());
-	pw.println("Número: "+alu.getNumero());
-	pw.println("Complemento: "+alu.getComplemento());	*/
+	Imprimir(request,response);
+	response.sendRedirect("RelAluno.jsp");
 	
 }
 
