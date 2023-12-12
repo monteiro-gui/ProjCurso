@@ -1,5 +1,16 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    
+    <%
+ request.getSession().getAttribute("usuario");
+ Object usu = session.getAttribute("usuario");
+ 
+ if(usu==null){
+	 response.sendRedirect("Login.jsp");
+ }
+ 
+ %>
+    
 <!DOCTYPE html>
 <html>
 <head>
@@ -18,7 +29,6 @@
 			<h1>Sistema Escolar</h1>
 			<h5>
 				<%
-					Object usu = session.getAttribute("usuario");
 					out.print("Bem Vindo(a) - " + usu);
 				%>
 			</h5>		
@@ -37,7 +47,7 @@
           <a class="dropdown-item" href="CadAluno.jsp">Aluno</a>
           <a class="dropdown-item" href="CadCurso.jsp">Curso</a>          
           <a class="dropdown-item" href="#">Turma</a>
-          <a class="dropdown-item" href="#">Matricula</a>          
+          <a class="dropdown-item" href="cadmatricula">Matricula</a>          
         </div>
       </li>
       
@@ -60,7 +70,7 @@
       </li>
     </ul>
    
-     
+     <a href="logout"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sair</button></a>
    
   </div>
 </nav>

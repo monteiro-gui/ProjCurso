@@ -1,5 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=utf-8"
     pageEncoding="utf-8"%>
+    <%
+ request.getSession().getAttribute("usuario");
+ Object usu = session.getAttribute("usuario");
+ 
+ if(usu==null){
+	 response.sendRedirect("Login.jsp");
+ }
+ 
+ %>
+    
     
    <!-- FAZER AS IMPORTAÇÕES DA CLASSE E DO ARRAYLIST -->
     

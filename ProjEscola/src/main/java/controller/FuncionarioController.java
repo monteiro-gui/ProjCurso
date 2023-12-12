@@ -14,7 +14,7 @@ import model.FuncionarioDao;
 /**
  * Servlet implementation class FuncionarioController
  */
-@WebServlet({"/FuncionarioController","/login"})
+@WebServlet({"/FuncionarioController","/login","/logout"})
 public class FuncionarioController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -40,6 +40,9 @@ public class FuncionarioController extends HttpServlet {
 		if(action.equals("/login")) {
 			Logar(request,response);
 		}
+		if(action.equals("/logout")) {
+			Logout(request,response);
+		}
 	}
 	
 	
@@ -58,6 +61,18 @@ public class FuncionarioController extends HttpServlet {
 			}
 			
 		}
+		
+		protected void Logout(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+			//cria o objeto session para acessar a sessão no método
+			HttpSession session = request.getSession(false);
+			session.removeAttribute("usuario");
+			if (session != null) {
+				session.invalidate();
+				}
+			//invalida a sessão
+				response.sendRedirect("Login.jsp");
+		}
+		
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
