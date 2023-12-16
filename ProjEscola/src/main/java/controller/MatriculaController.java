@@ -18,11 +18,13 @@ import model.AlunoDao;
 import model.Curso;
 import model.CursoDao;
 import model.Matricula;
+import model.MatriculaDao;
+import model.Matriculados;
 
 /**
  * Servlet implementation class MatriculaController
  */
-@WebServlet({"/MatriculaController","/cadmatricula","/matricular"})
+@WebServlet({"/MatriculaController","/cadmatricula","/matricular","/relmatricula"})
 public class MatriculaController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -39,6 +41,7 @@ public class MatriculaController extends HttpServlet {
     AlunoDao daoalu = new AlunoDao();
     CursoDao daocurso = new CursoDao();
     Matricula matr = new Matricula();
+    MatriculaDao daomatr = new MatriculaDao();
 
 	/**
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
@@ -55,6 +58,10 @@ public class MatriculaController extends HttpServlet {
 		
 		if(action.equals("/matricular")) {
 			Salvar(request,response);
+		}
+		
+		if(action.equals("/relmatricula")) {
+			Imprimir(request,response);
 		}
 	}
 	
@@ -89,6 +96,15 @@ public class MatriculaController extends HttpServlet {
 		        response.sendRedirect("indexadm.jsp");
 
 	}
+	
+	protected void Imprimir(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		//CHAMAR O DAO
+			ArrayList<Matriculados> lista = daomatr.listar();
+			request.setAttribute("matriculados", lista);
+			RequestDispatcher rd = request.getRequestDispatcher("RelMatriculas.jsp");
+			rd.forward(request, response);   			
+			}
+
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

@@ -23,11 +23,40 @@
 </head>
 <body>
 
-<div class="container">
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre Nós</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://www.java.com/pt-BR/">Programação em Java</a>
+          <a class="dropdown-item" href="https://learn.microsoft.com/pt-br/dotnet/csharp/">Programação em C#</a>
+          <a class="dropdown-item" href="https://www.python.org/doc/">Programação em Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Ajuda</a>
+        </div>
+      </li>
+    </ul>
+   
+      <a href="Login.jsp"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></a>
+   
+  </div>
+</nav>
+
 
 	<div class="row">
 		<div class="col-md-12 text-center">
-		<h3>Controle de Alunos</h3>
+		<h3>Cadastrar Alunos</h3>
 		</div>
 	</div>
   

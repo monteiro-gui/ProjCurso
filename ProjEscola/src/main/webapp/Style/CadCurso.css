@@ -17,6 +17,10 @@
 fieldset{
     border: 0;
 }
+
+nav{
+	
+}
 body{
     background-image: linear-gradient( to top, #000 50%, #424141, #636060 , #949191);
     font-family: sans-serif;
@@ -24,7 +28,7 @@ body{
     color: #ddbea9;
     margin-left: 36%;
     margin-top: 1%;
-    justify-content: center;
+   
 }
 
 input, select, textarea, button{

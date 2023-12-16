@@ -37,7 +37,12 @@
 </div>
 
 <nav class="navbar navbar-expand-lg navbar-light bg-light">
+	
   <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+  <ul class="navbar-nav mr-auto">
+    <li class="nav-item active">
+        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(página atual)</span></a>
+      </li>
     <ul class="navbar-nav mr-auto">      
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -59,15 +64,10 @@
           <a class="dropdown-item" href="relaluno">Aluno</a>
           <a class="dropdown-item" href="#">Curso</a>          
           <a class="dropdown-item" href="#">Turma</a>
-          <a class="dropdown-item" href="#">Matricula</a>          
+          <a class="dropdown-item" href="relmatricula">Matrícula</a>          
         </div>
       </li>
       
-      
-      
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Desativado</a>
-      </li>
     </ul>
    
      <a href="logout"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sair</button></a>

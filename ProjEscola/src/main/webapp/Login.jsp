@@ -9,6 +9,29 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 </head>
 <body>
+	<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+      
+      <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(página atual)</span></a>
+      </li>
+      
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="relaluno">Aluno</a>
+          <a class="dropdown-item" href="#">Curso</a>          
+          <a class="dropdown-item" href="#">Turma</a>
+          <a class="dropdown-item" href="#">Matricula</a>          
+        </div>
+      </li>
+      
+      </ul>
+   
+     <a href="logout"><button class="btn btn-outline-success my-2 my-sm-0" type="button">Sair</button></a>
+   
+  </div>
+</nav>
 
 	<div class="container">
 		<div class="row">

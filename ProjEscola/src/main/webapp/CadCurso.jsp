@@ -17,10 +17,41 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <link rel="stylesheet" href="Style/CadCurso.css" media="">
 <title>Matricule-se já!</title>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+
+
+  <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="index.jsp">Home <span class="sr-only">(página atual)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Sobre Nós</a>
+      </li>
+      <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          Cursos
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" href="https://www.java.com/pt-BR/">Programação em Java</a>
+          <a class="dropdown-item" href="https://learn.microsoft.com/pt-br/dotnet/csharp/">Programação em C#</a>
+          <a class="dropdown-item" href="https://www.python.org/doc/">Programação em Python</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="#">Ajuda</a>
+        </div>
+      </li>
+    </ul>
+   
+      <a href="Login.jsp"><button class="btn btn-outline-success my-2 my-sm-0" type="submit">Login</button></a>
+   
+  </div>
+</nav>
+
  <div>
         <h1 id="titulo">Cadastro de Curso</h1>
         <p id="subtitulo">Complete suas Informações</p>
